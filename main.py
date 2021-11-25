@@ -16,7 +16,6 @@ def genurl():
         four.append(random.choice(symb))
     for i in range(12):
         five.append(random.choice(symb))
-
     first= "".join(first)
     third= "".join(third)
     second= "".join(second)
