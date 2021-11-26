@@ -22,7 +22,6 @@ def genurl():
     second= "".join(second)
     four= "".join(four)
     five= "".join(five)
-
     url = f"https://gosuslugi.ru/v1/status-cert/{first}-{second}-{third}-{four}-{five}/pgu/srfile/pdf?lang=ru"
     return url
 print("""
