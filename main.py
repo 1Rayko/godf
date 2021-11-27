@@ -38,7 +38,13 @@ while 1:
     url = genurl()
     s  = requests.Session()
     r = s.get(url,headers = headers)
-    if r.status_code != 200:# бляха-муха какой код (200 в любом случае возвращается)
-        print("\033[33m"+url)
+    if r.status_code == 200:# бляха-муха какой код (200 в любом случае возвращается)
+        with open("log.txt","a") as file_handler:
+            print(url)
+            file_handler.write(url+"\n")
     else:
-        print(url)
+        with open("log.txt","a") as file_handler:
+            print(url + " ИЗ ELSE ")
+            file_handler.write("ELSE "+ url+"\n")
+
+
