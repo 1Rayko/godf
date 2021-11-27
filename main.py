@@ -26,7 +26,6 @@ def genurl():
     url = f"https://gosuslugi.ru/v1/status-cert/{first}-{second}-{third}-{four}-{five}/pgu/srfile/pdf?lang=ru"
     return url
 print("""
-
        __________  ____  ______
       / ____/ __ \/ __ \/ ____/
      / / __/ / / / / / / /_
@@ -37,7 +36,7 @@ print("""
 while 1:
     url = genurl()
     r = requests.get(url)
-    if r.status_code == 404:
+    if r.status_code == 404:# бляха-муха какой код (200 в любом случае возвращается)
         print("\033[33m"+url)
     #  else:
     #      print("Невалид "+ url  )
