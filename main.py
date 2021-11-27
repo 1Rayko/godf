@@ -31,9 +31,13 @@ print("""
     \____/\____/_____/_/
     github.com/1Rayko/GODF
 """)
+headers = { 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:94.0) Gecko/20100101 Firefox/94.0',
+   'From': 'alexHate1@protonmail.com'
+}
 while 1:
     url = genurl()
-    r = requests.get(url)
+    s  = requests.Session()
+    r = s.get(url,headers = headers)
     if r.status_code != 200:# бляха-муха какой код (200 в любом случае возвращается)
         print("\033[33m"+url)
     else:
