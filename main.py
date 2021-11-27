@@ -34,7 +34,7 @@ print("""
 while 1:
     url = genurl()
     r = requests.get(url)
-    if r.status_code == 404:# бляха-муха какой код (200 в любом случае возвращается)
+    if r.status_code != 200:# бляха-муха какой код (200 в любом случае возвращается)
         print("\033[33m"+url)
     else:
-        print("Невалид "+ url)
+        print(url)
